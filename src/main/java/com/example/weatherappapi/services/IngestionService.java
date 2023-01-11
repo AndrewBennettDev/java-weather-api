@@ -46,7 +46,7 @@ public class IngestionService {
   public Object getAstronomy(int location) throws IOException, InterruptedException {
     HttpRequest request = HttpRequest.newBuilder()
         .uri(URI.create(BASE_URL + "/astronomy.json?q=" + location))
-        .header("X-RapidAPI-Key", "d403938b14mshe8d8263d5d95dfbp1d81b4jsn9b37fb36178f")
+        .header("X-RapidAPI-Key", "[secret_value]")
         .header("X-RapidAPI-Host", "weatherapi-com.p.rapidapi.com")
         .build();
     HttpResponse<String> response = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofString());
